@@ -44,8 +44,8 @@ class SudokuFuzzTest(FuzzTest):
             valid = self.validator.checkSudoku(board)                    
 
 
-#@default_chain.connect()
-@default_chain.connect("ws://localhost:8555")
+
+@default_chain.connect()
 def test_sudoku_fuzz():
     default_chain.set_default_accounts(default_chain.accounts[0])
     SudokuFuzzTest().run(sequences_count=1000, flows_count=1)        

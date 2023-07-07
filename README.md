@@ -25,7 +25,7 @@ One of the challenges to get full fuzz-based coverage of the solidty function is
 
 
 
-checkSudoku is a pure function, so I didn't use flow based testing with state.  I set `flow_count=1` and ran large numbers of sequences to test.
+`checkSudoku` is a pure function, so I didn't use flow based testing with state.  I set `flow_count=1` and ran large numbers of sequences to test.
 
 ```python
 SudokuFuzzTest().run(sequences_count=1000, flows_count=1)  
@@ -36,7 +36,7 @@ SudokuFuzzTest().run(sequences_count=1000, flows_count=1)
 ## Running The Tests
 
 ```
-woke test tests/test_fuzz.py
+woke fuzz tests/test_fuzz.py
 ```
 
 
